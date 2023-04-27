@@ -20,7 +20,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 git url:  "${params.Git_URL}",
                     branch: "${params.Branch}"
-                    sh "sed -i -e 's@<maven.compiler.target>*</maven.compiler.target>@<maven.compiler.target>${params.Java_Version}</maven.compiler.target>@' -e 's@<maven.compiler.source>.*</maven.compiler.source>@<maven.compiler.source>${params.Java_Version}</maven.compiler.source>@' pom.xml"
+                    sh "sed -i -e 's@<maven.compiler.target>*</maven.compiler.target>@<maven.compiler.target>${params.Java_Version}</maven.compiler.target>@' -e 's@<maven.compiler.source>*</maven.compiler.source>@<maven.compiler.source>${params.Java_Version}</maven.compiler.source>@' pom.xml"
         }
         }
         stage('COMPILE'){

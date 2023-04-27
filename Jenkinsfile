@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git branch: 'main',
-                 url: 'https://github.com/matthcol/movieapp_jdbc.git
+                 url: 'https://github.com/matthcol/movieapp_jdbc.git'
             }
         }
         stage ('compile') {
